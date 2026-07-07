@@ -160,7 +160,8 @@ nav {
 
 #column-content {
   gap: 16px; /* Separación entre elementos dentro de la columna */
-  padding: 0 0 120px 120px; /* Espacio interno inferior y izquierdo */
+  padding: 120px 0 120px 120px; /* Espacio interno inferior y izquierdo */
+  height: 100%;
 }
 
 #column-content > h1 {
@@ -204,9 +205,10 @@ nav {
 */
 .secondary-header {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://starlink.com/assets-new/images/landing/illustrations/illustration_08.webp");
-  background-size: cover; /* Cubrir todo el área sin repetir */
+  background-size: 900px; /* Cubrir todo el área sin repetir */
+  background-repeat: no-repeat;
   background-position: center; /* Centrar la imagen */
   padding: 60px 32px; /* Espacio arriba/abajo y laterales */
   display: flex; /* Centrar internamente con flex */
@@ -311,6 +313,7 @@ nav {
 
   #column-content {
     padding: 24px 24px 80px 24px;
+    justify-content: center;
   }
 
   .cards-container {
