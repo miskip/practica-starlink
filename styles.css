@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); /* Importa la fuente Roboto desde Google Fonts */
+
+/*
+  ======VARIABLES======
+*/
+:root {
+  /*
+    Las variables son pequeños contenedores de información para reutilizar estilos.
+  */
+  --text-color-main: white; /* Color principal del texto */
+  --size-titles: 64px; /* Tamaño para títulos grandes */
+  --size-subtitles: 24px; /* Tamaño para subtítulos */
+  --size-highlights-paragraphs: 19px; /* Tamaño para texto destacado */
+  --size-paragraphs: 14px; /* Tamaño para párrafos normales */
+  --gap-standard: 12px; /* Espacio estándar entre elementos */
+  --padding-standard: 32px; /* Relleno estándar */
+  --color-button: #40444f60; /* Color semitransparente para botones */
+}
+
+/*
+  ======GENERALES======
+*/
+* {
+  margin: 0; /* Quita márgenes predeterminados */
+  padding: 0; /* Quita rellenos predeterminados */
+  box-sizing: border-box; /* Evita desbordes por padding/margen */
+  font-family: "Roboto", sans-serif; /* Aplica Roboto a todo el documento */
+  color: var(--text-color-main); /* Aplica color de texto principal */
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: black; /* Fondo negro para la página */
+}
+
+a {
+  text-decoration: none; /* Quita subrayado de enlaces */
+}
+
+button {
+  border: none; /* Quita borde predeterminado de botones */
+}
+
+/*
+  ======REUTILIZABLES======
+*/
+.row {
+  display: flex; /* Crea un contenedor en fila */
+}
+
+.column {
+  display: flex; /* Crea un contenedor flexible */
+  flex-direction: column; /* Organiza hijos en columna */
+}
+
+.flex-main-center {
+  justify-content: center; /* Centra elementos en el eje principal */
+}
+
+.flex-main-space-between {
+  justify-content: space-between; /* Separa elementos entre extremos */
+}
+
+.flex-secondary-center {
+  align-items: center; /* Centra items en el eje cruzado */
+}
+
+.gap-standard {
+  gap: var(--gap-standard); /* Aplica el espacio estándar entre hijos */
+}
+
+.padding-standard {
+  padding: var(--padding-standard); /* Aplica relleno estándar */
+}
+
+.transparent {
+  background-color: transparent; /* Fondo transparente */
+}
+
+/*
+  ======ESPECIFICOS======
+*/
+
+header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Capa semitransparente sobre la imagen */
+    url("https://starlink.com/assets-new/images/landing/field/v4_night_sky.webp"); /* Imagen de fondo */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el área */
+  background-position: center; /* Centra la imagen de fondo */
+  min-height: 100vh; /* Altura mínima igual a la ventana del navegador */
+  padding: 0 32px; /* Relleno horizontal de 32px */
+}
+
+nav {
+  padding: 32px 0 0 0; /* Relleno superior para el nav */
+}
+
+.circular-button {
+  border-radius: 100%; /* Hace el botón completamente redondo */
+  padding: 10px; /* Relleno interior */
+  background-color: var(--color-button); /* Color de fondo para el botón */
+}
+
+.button-inactive {
+  padding: 2px 8px; /* Relleno interno pequeño */
+}
+
+.button-active {
+  padding: 2px 6px; /* Relleno interno para el botón activo */
+  background-color: rgba(199, 199, 199, 0.753); /* Fondo gris claro semitransparente */
+  border-radius: 8px; /* Esquinas redondeadas */
+}
+
+.buttons-menu {
+  background-color: rgba(128, 128, 128, 0.737); /* Fondo gris semitransparente */
+  padding: 2px; /* Relleno interno pequeño */
+  border-radius: 8px; /* Esquinas redondeadas */
+  margin-right: 15px; /* Espacio a la derecha */
+}
+
+.buttons-menu > button {
+  padding: 8px 16px; /* Relleno interno para botones del menú */
+  font-weight: 600; /* Texto seminegrita */
+}
+
+.link-menu {
+  font-size: var(--size-paragraphs); /* Tamaño de fuente para enlaces del menú */
+  font-weight: 600; /* Texto seminegrita */
+}
+
+.col-content {
+  display: flex; /* Contenedor flexible para columnas */
+}
+
+.button-hightlight{
+  background-color: white; /* Fondo blanco */
+  color: black; /* Texto negro */
+}
+
+.button-nohightlight{
+  background-color: rgb(67, 67, 67); /* Fondo gris oscuro */
+  color: white; /* Texto blanco */
+}
+
+#logo {
+  letter-spacing: 4px; /* Espacio entre letras */
+  font-size: 16px; /* Tamaño de fuente del logo */
+  margin-right: 16px; /* Margen derecho */
+}
+
+#header-content {
+  display: grid; /* Usa grid para el contenido del header */
+  grid-template-columns: 50% 50%; /* Dos columnas iguales */
+  height: 100%; /* Altura completa del contenedor */
+}
+
+#column-content {
+  gap: 16px; /* Separación entre elementos dentro de la columna */
+  padding: 0 0 120px 120px; /* Espacio interno inferior y izquierdo */
+}
+
+#column-content > h1 {
+  font-size: var(--size-titles); /* Tamaño grande para el título */
+  font-weight: 800; /* Título muy negrita */
+}
+
+#column-content > p {
+  font-size: var(--size-paragraphs); /* Tamaño estándar para párrafos */
+  color: rgb(145, 145, 145); /* Texto gris claro */
+  font-weight: 600; /* Texto seminegrita */
+}
+
+#column-content > h2 {
+  font-size: var(--size-titles); /* Tamaño grande para subtítulos */
+  font-weight: 600; /* Texto seminegrita */
+}
+
+#column-content > h2 > span {
+  font-size: var(--size-highlights-paragraphs); /* Tamaño para texto destacado en h2 */
+  color: rgb(145, 145, 145); /* Color gris claro */
+}
+
+#column-content > div{
+  display: flex; /* Contenedor flexible para botones u otros elementos */
+  gap: 16px; /* Espacio entre los elementos */
+}
+
+#column-content > div > button{
+  padding: 8px 32px; /* Relleno interno para botones */
+  font-size: var(--size-paragraphs); /* Tamaño de texto de botón */
+  font-weight: 600; /* Texto seminegrita */
+  border-radius: 6px; /* Esquinas ligeramente redondeadas */
+}
+
+
+/*
+  Sección secundaria (illustration + contenido centrado)
+  - Uso: sección con ilustración de apoyo, centrada horizontalmente.
+  - Mantengo un padding amplio para separación vertical.
+*/
+.secondary-header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://starlink.com/assets-new/images/landing/illustrations/illustration_08.webp");
+  background-size: cover; /* Cubrir todo el área sin repetir */
+  background-position: center; /* Centrar la imagen */
+  padding: 60px 32px; /* Espacio arriba/abajo y laterales */
+  display: flex; /* Centrar internamente con flex */
+  justify-content: center; /* Centrado horizontal */
+}
+
+/* Contenedor del contenido dentro de la sección secundaria
+   - Columnas apiladas, centradas, con un ancho máximo para legibilidad */
+.secondary-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px; /* Separación vertical entre hijos */
+  width: 100%;
+  max-width: 1100px; /* Limita el ancho para evitar líneas demasiado largas */
+}
+
+/* Botones de selección centrados (ej. mensual/anual)
+   - Fondo con radio grande para aspecto de cápsula */
+.buttons-center {
+  background-color: rgba(128, 128, 128, 0.737);
+  padding: 4px; /* Pequeño acolchado alrededor de los botones */
+  border-radius: 20px; /* Forma redondeada tipo cápsula */
+  display: flex;
+  justify-content: center;
+  width: fit-content; /* Ajusta el ancho al contenido */
+  margin: 0 auto; /* Centrar en su contenedor */
+}
+
+/* Estilos base para los botones dentro de la cápsula */
+.buttons-center > button {
+  display: flex;
+  justify-content: center;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 20px; /* Mantener forma redondeada */
+  color: #ffffff; /* Texto en blanco por contraste */
+}
+
+/* Estado activo: botón resaltado */
+.buttons-center > button.button-active {
+  background-color: rgba(199, 199, 199, 0.753);
+}
+
+/* Estado inactivo: transparente para que se note la cápsula */
+.buttons-center > button.button-inactive {
+  background-color: transparent;
+}
+
+/* Contenedor para tarjetas (cards)
+   - En pantallas grandes: fila de 3 tarjetas con gap controlado
+   - Uso: presentar características o comparativas */
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch; /* Hace que las tarjetas tengan la misma altura */
+  gap: 24px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Tarjeta individual
+   - Fondo oscuro, bordes redondeados y padding generoso
+   - Flex para permitir distribuir título/descripcion/acciones */
+.card {
+  background-color: #111111;
+  border-radius: 24px;
+  padding: 30px;
+  color: #ffffff;
+  flex: 1 1 calc((100% - 48px) / 3); /* Tres columnas con gap considerado */
+  min-width: 280px; /* Evita que la tarjeta sea demasiado estrecha */
+  max-width: 360px; /* Limita el crecimiento */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Separar contenido superior e inferior */
+}
+
+/* Título de tarjeta: tamaño y peso para destacar */
+.card-title {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* Descripción de tarjeta: color más tenue y buena lectura */
+.card-description {
+  color: #8a8a8a;
+  font-size: 0.95rem;
+  line-height: 1.5; /* Mejora legibilidad en párrafos */
+  margin-bottom: 35px; /* Espacio antes de acciones/precio */
+}
+
+/*
+  ======RESPONSIVE======
+*/
+@media (max-width: 900px) {
+  #header-content {
+    grid-template-columns: 1fr;
+  }
+
+  #column-content {
+    padding: 24px 24px 80px 24px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: min(100%, 500px);
+  }
+}
+
+@media (max-width: 600px) {
+  header,
+  .secondary-header {
+    padding: 40px 20px;
+  }
+
+  nav {
+    padding: 20px 0 0;
+  }
+
+  #column-content > h1 {
+    font-size: 3rem;
+  }
+
+  #column-content > h2 {
+    font-size: 2.5rem;
+  }
+
+  #column-content > div > button {
+    padding: 10px 20px;
+  }
+
+  .buttons-center {
+    width: auto;
+    padding: 4px;
+  }
+
+  .cards-container {
+    gap: 18px;
+  }
+
+  .card {
+    min-width: 100%;
+    padding: 24px;
+  }
+}
+
+/*
+  ======TARJETAS DE PRECIO======
+*/
+.card-price-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  color: #8a8a8a;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.card-price {
+  font-size: 2.2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.price-period {
+  font-size: 1.1rem;
+  color: #8a8a8a;
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+.card-list {
+  list-style-type: disc;
+  padding-left: 18px;
+  margin: 0 0 30px;
+  color: #8a8a8a;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.card-list li {
+  margin-bottom: 12px;
+}
