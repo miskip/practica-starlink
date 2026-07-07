@@ -1,0 +1,111 @@
+<!doctype html> <!-- Declara el documento como HTML5 -->
+<html lang="en"> <!-- Raíz del documento, idioma en inglés -->
+
+
+  <head> <!-- Encabezado con metadatos y enlaces a estilos -->
+    <meta charset="UTF-8" /> <!-- Define la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Hace la página responsive -->
+    <title>Starlink</title> <!-- Título de la pestaña del navegador -->
+    <link rel="stylesheet" href="./styles.css" /> <!-- Enlaza la hoja de estilos local -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> <!-- Enlaza Font Awesome para iconos -->
+  </head>
+
+
+  <body> <!-- Cuerpo principal de la página -->
+    <header class=""> <!-- Encabezado grande con imagen de fondo -->
+      <nav class="row flex-main-space-between flex-secondary-center"> <!-- Barra de navegación con flexbox -->
+        <div class="row flex-secondary-center gap-standard"> <!-- Grupo de logo y enlaces a la izquierda -->
+          <h2 id="logo">STARLINK</h2> <!-- Logo de texto -->
+          <a class="link-menu" href="#">Residencial</a> <!-- Enlace de navegación -->
+          <a class="link-menu" href="#">Itinerante</a> <!-- Enlace de navegación -->
+        </div>
+        <div class="row flex-secondary-center gap-standard"> <!-- Grupo de botones y menú a la derecha -->
+          <div class="row flex-secondary-center gap-standard buttons-menu"> <!-- Contenedor de botones de menú -->
+            <button class="button-active">Personal</button> <!-- Botón activo -->
+            <button class="transparent button-inactive">Empresa</button> <!-- Botón inactivo con fondo transparente -->
+          </div>
+          <button class="circular-button"> <!-- Botón redondo para menú hamburguesa -->
+            <i class="fa-solid fa-bars"></i> <!-- Icono de barras de Font Awesome -->
+          </button>
+        </div>
+      </nav>
+      <div id="header-content"> <!-- Contenedor principal de contenido dentro del header -->
+        <div
+          class="col-content flex column flex-secondary-center flex-main-center"
+        > <!-- Columna flexible centrada dentro del header -->
+          <div id="column-content" class="flex column"> <!-- Contenido textual con espaciado -->
+            <h1> <!-- Título principal -->
+              Fast, affordable <br /> <!-- Salto de línea dentro del título -->
+              internet
+            </h1>
+            <p>STARTING AT</p> <!-- Texto introductorio del precio -->
+            <h2>$55<span>/mo</span></h2> <!-- Precio con unidad mensual -->
+            <div class="flex gap-standard"> <!-- Contenedor de botones secundarios -->
+              <button class="button-hightlight">Get Started</button> <!-- Botón principal destacado -->
+              <button class="button-nohightlight">View Pricing</button> <!-- Botón secundario -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+      
+<section class="secondary-header"> <!-- Sección secundaria con fondo y contenido centrado -->
+  <div class="secondary-content"> <!-- Contenedor centrado para botones y tarjetas -->
+    <div class="row flex-secondary-center gap-standard buttons-center"> <!-- Contenedor de botones de menú -->
+      <button class="button-active">En casa</button> <!-- Botón activo -->
+      <button class="transparent button-inactive">En cualquier lugar</button> <!-- Botón inactivo con fondo transparente -->
+    </div>
+
+    <div class="cards-container">
+      <div class="card">
+        <h3 class="card-title">Residencial: 100 Mb/s</h3>
+        <p class="card-description">
+          Hasta 100 Mb/s. Servicio de internet estable y asequible en el hogar. Datos ilimitados.
+        </p>
+        <div class="card-price-container">
+          <span class="price-label">DESDE</span>
+          <h2 class="card-price">35 €<span class="price-period">/mes</span></h2>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Residencial: 200 Mb/s</h3>
+        <p class="card-description">
+          Hasta 200 Mb/s. Servicio de internet rápido y estable para uso diario en el hogar con más dispositivos. Datos ilimitados.
+        </p>
+        <div class="card-price-container">
+          <span class="price-label">DESDE</span>
+          <h2 class="card-price">45 €<span class="price-period">/mes</span></h2>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="card-title">Residencial Max</h3>
+        <p class="card-description">
+          Nuestro servicio de Internet doméstico de mayor rendimiento con las velocidades máximas disponibles.
+        </p>
+        <ul class="card-list">
+          <li>Hasta más de 400 Mbps</li>
+          <li>Datos ilimitados</li>
+          <li>El mejor wifi</li>
+        </ul>
+        <div class="card-price-container">
+          <span class="price-label">DESDE</span>
+          <h2 class="card-price">65 €<span class="price-period">/mes</span></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </body>
+
+ 
+</html>
