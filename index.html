@@ -1,111 +1,190 @@
-<!doctype html> <!-- Declara el documento como HTML5 -->
-<html lang="en"> <!-- Raíz del documento, idioma en inglés -->
-
-
-  <head> <!-- Encabezado con metadatos y enlaces a estilos -->
-    <meta charset="UTF-8" /> <!-- Define la codificación de caracteres -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Hace la página responsive -->
-    <title>Starlink</title> <!-- Título de la pestaña del navegador -->
-    <link rel="stylesheet" href="./styles.css" /> <!-- Enlaza la hoja de estilos local -->
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Starlink - Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-    /> <!-- Enlaza Font Awesome para iconos -->
+    />
   </head>
-
-
-  <body> <!-- Cuerpo principal de la página -->
-    <header class=""> <!-- Encabezado grande con imagen de fondo -->
-      <nav class="row flex-main-space-between flex-secondary-center"> <!-- Barra de navegación con flexbox -->
-        <div class="row flex-secondary-center gap-standard"> <!-- Grupo de logo y enlaces a la izquierda -->
-          <h2 id="logo">STARLINK</h2> <!-- Logo de texto -->
-          <a class="link-menu" href="#">Residencial</a> <!-- Enlace de navegación -->
-          <a class="link-menu" href="#">Itinerante</a> <!-- Enlace de navegación -->
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="row flex-main-space-between flex-secondary-center">
+        <div class="row flex-secondary-center gap-standard">
+          <h2 id="logo">STARLINK</h2>
+          <a class="link-menu" href="#">Residencial</a>
+          <a class="link-menu" href="#">Itinerante</a>
         </div>
-        <div class="row flex-secondary-center gap-standard"> <!-- Grupo de botones y menú a la derecha -->
-          <div class="row flex-secondary-center gap-standard buttons-menu"> <!-- Contenedor de botones de menú -->
-            <button class="button-active">Personal</button> <!-- Botón activo -->
-            <button class="transparent button-inactive">Empresa</button> <!-- Botón inactivo con fondo transparente -->
+        <div class="row flex-secondary-center gap-standard">
+          <div class="row flex-secondary-center gap-standard buttons-menu">
+            <button class="button-active">Personal</button>
+            <button class="transparent button-inactive">Empresa</button>
           </div>
-          <button class="circular-button"> <!-- Botón redondo para menú hamburguesa -->
-            <i class="fa-solid fa-bars"></i> <!-- Icono de barras de Font Awesome -->
-          </button>
+          <button class="circular-button"><i class="fa-solid fa-bars"></i></button>
         </div>
       </nav>
-      <div id="header-content"> <!-- Contenedor principal de contenido dentro del header -->
-        <div
-          class="col-content flex column flex-secondary-center flex-main-center"
-        > <!-- Columna flexible centrada dentro del header -->
-          <div id="column-content" class="flex column"> <!-- Contenido textual con espaciado -->
-            <h1> <!-- Título principal -->
-              Fast, affordable <br /> <!-- Salto de línea dentro del título -->
-              internet
-            </h1>
-            <p>STARTING AT</p> <!-- Texto introductorio del precio -->
-            <h2>$55<span>/mo</span></h2> <!-- Precio con unidad mensual -->
-            <div class="flex gap-standard"> <!-- Contenedor de botones secundarios -->
-              <button class="button-hightlight">Get Started</button> <!-- Botón principal destacado -->
-              <button class="button-nohightlight">View Pricing</button> <!-- Botón secundario -->
+
+      <div id="header-content">
+        <div class="col-content flex column flex-secondary-center flex-main-center">
+          <div id="column-content" class="flex column">
+            <h1>Fast, affordable<br/>internet</h1>
+            <p>STARTING AT</p>
+            <h2>$55<span>/mo</span></h2>
+            <div class="flex gap-standard">
+              <button class="button-hightlight">Get Started</button>
+              <button class="button-nohightlight">View Pricing</button>
             </div>
           </div>
         </div>
       </div>
     </header>
-      
-<section class="secondary-header"> <!-- Sección secundaria con fondo y contenido centrado -->
-  <div class="secondary-content"> <!-- Contenedor centrado para botones y tarjetas -->
-    <div class="row flex-secondary-center gap-standard buttons-center"> <!-- Contenedor de botones de menú -->
-      <button class="button-active">En casa</button> <!-- Botón activo -->
-      <button class="transparent button-inactive">En cualquier lugar</button> <!-- Botón inactivo con fondo transparente -->
-    </div>
 
-    <div class="cards-container">
-      <div class="card">
-        <h3 class="card-title">Residencial: 100 Mb/s</h3>
-        <p class="card-description">
-          Hasta 100 Mb/s. Servicio de internet estable y asequible en el hogar. Datos ilimitados.
-        </p>
-        <div class="card-price-container">
-          <span class="price-label">DESDE</span>
-          <h2 class="card-price">35 €<span class="price-period">/mes</span></h2>
+    <!-- SECCIÓN 2: selección y cards de precios -->
+    <section class="secondary-header">
+      <div class="secondary-content">
+        <div class="row flex-secondary-center gap-standard buttons-center">
+          <button class="button-active">En casa</button>
+          <button class="transparent button-inactive">En cualquier lugar</button>
+        </div>
+
+        <div class="cards-container">
+          <div class="card">
+            <h3 class="card-title">Residencial: 100 Mb/s</h3>
+            <p class="card-description">Hasta 100 Mb/s. Servicio de internet estable y asequible en el hogar. Datos ilimitados.</p>
+            <div class="card-price-container"><span class="price-label">DESDE</span><h2 class="card-price">35 €<span class="price-period">/mes</span></h2></div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Residencial: 200 Mb/s</h3>
+            <p class="card-description">Hasta 200 Mb/s. Servicio rápido y estable para más dispositivos.</p>
+            <div class="card-price-container"><span class="price-label">DESDE</span><h2 class="card-price">45 €<span class="price-period">/mes</span></h2></div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Residencial Max</h3>
+            <p class="card-description">Nuestro servicio de mayor rendimiento con velocidades superiores.</p>
+            <ul class="card-list"><li>Hasta más de 400 Mbps</li><li>Datos ilimitados</li><li>El mejor wifi</li></ul>
+            <div class="card-price-container"><span class="price-label">DESDE</span><h2 class="card-price">65 €<span class="price-period">/mes</span></h2></div>
+          </div>
+        </div>
+
+        <p class="card-description note">Las velocidades indicadas son las máximas disponibles y pueden variar en horas de congestión.</p>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3 -->
+    <section class="tercer-header">
+      <div class="tercer-content">
+        <div class="tercer-text">
+          <h2>Fiable y resistente</h2>
+          <p>Internet de alta velocidad con un tiempo de actividad muy alto y diseñado para condiciones extremas.</p>
+          <button class="button-hightlight">Más información</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4 -->
+    <section class="cuarto-header">
+      <div class="cuarto-content">
+        <div class="cuarto-copy">
+          <h1>Internet para viajar,<br/>hacer rutas por carretera y moverte en el día a día</h1>
+          <p>Internet que se mueve contigo, incluso en zonas muertas.</p>
+          <button class="button-hightlight">Más información</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: carrusel overflow -->
+    <section class="quinta-header">
+      <h2 class="quinta-heading">Internet de alta velocidad que se adapta a tus necesidades</h2>
+      <div class="cards-container cards-scroll" tabindex="0">
+        <div class="card image-card">
+          <div class="card-image" style="background-image: url('https://starlink.com/assets-new/images/landing/field/v4_montana_dusk_sky.webp')">
+          </div>
+          <div class="card-info"><h3 class="card-title">Internet residencial en zonas rurales y remotas. </h3>
+            <p class="card-description"> Starlink Residencial ofrece conectividad estable y de alta velocidad incluso en las
+              zonas más remotas, más allá del alcance de la cobertura celular.</p>
+          </div>
+        </div>
+
+        <div class="card image-card">
+          <div class="card-image" style="background-image: url('https://starlink.com/assets-new/images/landing/field/mini_backpacker_on_mountain.webp')">
+          </div>
+          <div class="card-info"><h3 class="card-title">Conexión en movimiento.</h3>
+          <p class="card-description">. Usa Starlink Itinerante para viajar, moverte en autocaravana, acampar, navegar y mucho más. Navegación y streaming,
+          sin zonas muertas ni velocidades bajas.</p>
+          </div>
+        </div>
+
+        <div class="card image-card">
+          <div class="card-image" style="background-image: url('https://starlink.com/assets-new/images/landing/field/v4_residential_2.webp')"></div>
+          <div class="card-info"><h3 class="card-title">Velocidades de hasta 400 Mb/s o más. </h3>
+          <p class="card-description">. Disfruta de la libertad de ver contenido en 4K en varios dispositivos a la vez, trabajar desde casa de forma 
+          eficiente, jugar en línea, navegar por redes sociales y mucho más.</p>
+          </div>
+        </div>
+
+        <div class="card image-card">
+          <div class="card-image" style="background-image: url('https://starlink.com/assets-new/images/landing/field/v4_winter.webp')"></div>
+          <div class="card-info"><h3 class="card-title">Conectividad fiable y resistente.</h3>
+          <p class="card-description">Mantén la conexión en condiciones climáticas extremas, durante cortes de energía y desastres naturales,
+             incluso cuando fallen las redes tradicionales.</p>
+          </div>
+        </div>
+
+        <div class="card image-card">
+          <div class="card-image" style="background-image: url('https://starlink.com/assets-new/images/landing/field/mini_stickerless_ground.webp')"></div>
+          <div class="card-info"><h3 class="card-title">Ultraportátil.</h3>
+          <p class="card-description"> El diseño compacto y ligero de Starlink Mini te permite conectarte en movimiento y disfrutar de una conectividad 
+            estable en cuestión de minutos cuando la necesitas.</p>
+          </div>
         </div>
       </div>
 
-      <div class="card">
-        <h3 class="card-title">Residencial: 200 Mb/s</h3>
-        <p class="card-description">
-          Hasta 200 Mb/s. Servicio de internet rápido y estable para uso diario en el hogar con más dispositivos. Datos ilimitados.
-        </p>
-        <div class="card-price-container">
-          <span class="price-label">DESDE</span>
-          <h2 class="card-price">45 €<span class="price-period">/mes</span></h2>
+      <div class="scroll-controls" aria-hidden="true">
+        <button class="scroll-btn left"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="scroll-btn right"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 6 -->
+    <section class="sesto-header">
+      <div class="sesto-content">
+        <div class="sesto-copy"><h1>Disponible a escala global</h1><p>Conectividad en muchos países y territorios.</p><button class="button-hightlight">Comprobar disponibilidad</button></div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 7 -->
+    <section class="septimo-header">
+      <div class="septimo-content">
+        <div class="septimo-copy"><h1>Conéctalo. Oriéntalo al cielo.</h1>
+        <p>Instalación sencilla y rápida.</p>
+        <button class="button-hightlight">Consigue la aplicación</button>
         </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3 class="card-title">Residencial Max</h3>
-        <p class="card-description">
-          Nuestro servicio de Internet doméstico de mayor rendimiento con las velocidades máximas disponibles.
-        </p>
-        <ul class="card-list">
-          <li>Hasta más de 400 Mbps</li>
-          <li>Datos ilimitados</li>
-          <li>El mejor wifi</li>
-        </ul>
-        <div class="card-price-container">
-          <span class="price-label">DESDE</span>
-          <h2 class="card-price">65 €<span class="price-period">/mes</span></h2>
-        </div>
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <nav class="footer-links row">
+        <a href="#">Empleo</a>
+        <a href="#">Operadores de satélites</a>
+        <a href="#">Revendedores autorizados</a>
+        <a href="#">Condiciones de privacidad y legales</a>
+        <a href="#">Información de la empresa</a>
+        <a href="#">Preferencias de privacidad</a>
+      </nav>
+      <div class="footer-bottom row"><span class="footer-logo">X</span>
+      <span>Starlink © 2026</span><span>Starlink es una división de SpaceX. Visite
+      <a href="https://www.spacex.com" target="_blank">spacex.com</a></span>
       </div>
-    </div>
-  </div>
-</section>
-
-
+    </footer>
   </body>
-
- 
 </html>
