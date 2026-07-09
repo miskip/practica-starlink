@@ -166,9 +166,10 @@ nav {
 }
 
 #column-content {
-  gap: 16px;
-  padding: 80px 0 0 64px;
+  gap: 16px; /* Separación entre elementos dentro de la columna */
+  padding: 120px 0 120px 120px; /* Espacio interno inferior y izquierdo */
   max-width: 520px;
+  height: 100%;
 }
 
 #column-content > h1 {
@@ -210,7 +211,7 @@ FOTO LINEAS BLANCAS
 */
 .secondary-header {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://starlink.com/assets-new/images/landing/illustrations/illustration_08.webp");
   background-size: 900px; /* Cubrir todo el área sin repetir */
   background-repeat: no-repeat;
@@ -309,7 +310,68 @@ FOTO LINEAS BLANCAS
   color: #8a8a8a;
   font-size: 0.75rem;
   line-height: 1.5; /* Mejora legibilidad en párrafos */
-  margin-bottom: 1px; /* Espacio antes de acciones/precio */
+  margin-bottom: 35px; /* Espacio antes de acciones/precio */
+}
+
+/*
+  ======RESPONSIVE======
+*/
+@media (max-width: 900px) {
+  #header-content {
+    grid-template-columns: 1fr;
+  }
+
+  #column-content {
+    padding: 24px 24px 80px 24px;
+    justify-content: center;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: min(100%, 500px);
+  }
+}
+
+@media (max-width: 600px) {
+  header,
+  .secondary-header {
+    padding: 40px 20px;
+  }
+
+  nav {
+    padding: 20px 0 0;
+  }
+
+  #column-content > h1 {
+    font-size: 3rem;
+  }
+
+  #column-content > h2 {
+    font-size: 2.5rem;
+  }
+
+  #column-content > div > button {
+    padding: 10px 20px;
+  }
+
+  .buttons-center {
+    width: auto;
+    padding: 4px;
+  }
+
+  .cards-container {
+    gap: 18px;
+  }
+
+  .card {
+    min-width: 100%;
+    padding: 24px;
+  }
+
 }
 
 /*
