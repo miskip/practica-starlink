@@ -5,13 +5,12 @@
 */
 :root {
   /*
-    Las variables son pequeños contenedores de informacion que puedes utilizar
+    Las variables son peque;os contenedores de informacion que puedes utilizar
     para reutilizar un estilo declarandolo una sola vez y utilizar ese estilo por toda
     la pagina
   */
   --text-color-main: white;
   --size-titles: 64px;
-  --size-hero: 56px;
   --size-subtitles: 24px;
   --size-highlights-paragraphs: 19px;
   --size-paragraphs: 14px;
@@ -80,8 +79,6 @@ button {
 
 /*
   ======ESPECIFICOS======
-FONDO PRINCIPAL
-
 */
 
 header {
@@ -153,23 +150,13 @@ nav {
 
 #header-content {
   display: grid;
-  grid-template-columns: minmax(420px, 520px) 1fr;
-  align-items: start;
+  grid-template-columns: 50% 50%;
   height: 100%;
-}
-
-.col-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 #column-content {
-  gap: 16px; /* Separación entre elementos dentro de la columna */
-  padding: 120px 0 120px 120px; /* Espacio interno inferior y izquierdo */
-  max-width: 520px;
-  height: 100%;
+  gap: 16px;
+  padding: 0 0 120px 120px;
 }
 
 #column-content > h1 {
@@ -192,6 +179,19 @@ nav {
   font-size: var(--size-highlights-paragraphs);
   color: rgb(145, 145, 145);
 }
+
+#column-content > div{
+  display: flex;
+  gap: 16px;
+}
+
+#column-content > div > button{
+  padding: 8px 32px;
+  font-size: var(--size-paragraphs);
+  font-weight: 600;
+  border-radius: 6px;
+}
+
 
 #column-content > div{
   display: flex;
