@@ -1,212 +1,219 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"); /* Importa la fuente Roboto desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /*
   ======VARIABLES======
 */
 :root {
   /*
-    Las variables son pequeños contenedores de información para reutilizar estilos.
+    Las variables son pequeños contenedores de informacion que puedes utilizar
+    para reutilizar un estilo declarandolo una sola vez y utilizar ese estilo por toda
+    la pagina
   */
-  --text-color-main: white; /* Color principal del texto */
-  --size-titles: 64px; /* Tamaño para títulos grandes */
-  --size-subtitles: 24px; /* Tamaño para subtítulos */
-  --size-highlights-paragraphs: 19px; /* Tamaño para texto destacado */
-  --size-paragraphs: 14px; /* Tamaño para párrafos normales */
-  --gap-standard: 12px; /* Espacio estándar entre elementos */
-  --padding-standard: 32px; /* Relleno estándar */
-  --color-button: #40444f60; /* Color semitransparente para botones */
+  --text-color-main: white;
+  --size-titles: 64px;
+  --size-hero: 56px;
+  --size-subtitles: 24px;
+  --size-highlights-paragraphs: 19px;
+  --size-paragraphs: 14px;
+  --gap-standard: 12px;
+  --padding-standard: 32px;
+  --color-button: #40444f60;
 }
 
 /*
   ======GENERALES======
 */
 * {
-  margin: 0; /* Quita márgenes predeterminados */
-  padding: 0; /* Quita rellenos predeterminados */
-  box-sizing: border-box; /* Evita desbordes por padding/margen */
-  font-family: "Roboto", sans-serif; /* Aplica Roboto a todo el documento */
-  color: var(--text-color-main); /* Aplica color de texto principal */
-}
-
-html,
-body {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color-main);
 }
 
 body {
-  background-color: black; /* Fondo negro para la página */
+  background-color: black;
 }
 
 a {
-  text-decoration: none; /* Quita subrayado de enlaces */
+  text-decoration: none;
 }
 
 button {
-  border: none; /* Quita borde predeterminado de botones */
+  border: none;
 }
 
 /*
   ======REUTILIZABLES======
 */
 .row {
-  display: flex; /* Crea un contenedor en fila */
+  display: flex;
 }
 
 .column {
-  display: flex; /* Crea un contenedor flexible */
-  flex-direction: column; /* Organiza hijos en columna */
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-main-center {
-  justify-content: center; /* Centra elementos en el eje principal */
+  justify-content: center;
 }
 
 .flex-main-space-between {
-  justify-content: space-between; /* Separa elementos entre extremos */
+  justify-content: space-between;
 }
 
 .flex-secondary-center {
-  align-items: center; /* Centra items en el eje cruzado */
+  align-items: center;
 }
 
 .gap-standard {
-  gap: var(--gap-standard); /* Aplica el espacio estándar entre hijos */
+  gap: var(--gap-standard);
 }
 
 .padding-standard {
-  padding: var(--padding-standard); /* Aplica relleno estándar */
+  padding: var(--padding-standard);
 }
 
 .transparent {
-  background-color: transparent; /* Fondo transparente */
+  background-color: transparent;
 }
 
 /*
   ======ESPECIFICOS======
+FONDO PRINCIPAL
+
 */
 
 header {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Capa semitransparente sobre la imagen */
-    url("https://starlink.com/assets-new/images/landing/field/v4_night_sky.webp"); /* Imagen de fondo */
-  background-size: cover; /* Ajusta la imagen para cubrir todo el área */
-  background-position: center; /* Centra la imagen de fondo */
-  min-height: 100vh; /* Altura mínima igual a la ventana del navegador */
-  padding: 0 32px; /* Relleno horizontal de 32px */
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://starlink.com/assets-new/images/landing/field/v4_night_sky.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 0 32px;
 }
 
 nav {
-  padding: 32px 0 0 0; /* Relleno superior para el nav */
+  padding: 32px 0 0 0;
 }
 
 .circular-button {
-  border-radius: 100%; /* Hace el botón completamente redondo */
-  padding: 10px; /* Relleno interior */
-  background-color: var(--color-button); /* Color de fondo para el botón */
+  border-radius: 100%;
+  padding: 10px;
+  background-color: var(--color-button);
 }
 
 .button-inactive {
-  padding: 2px 8px; /* Relleno interno pequeño */
+  padding: 2px 8px;
 }
 
 .button-active {
-  padding: 2px 6px; /* Relleno interno para el botón activo */
-  background-color: rgba(199, 199, 199, 0.753); /* Fondo gris claro semitransparente */
-  border-radius: 8px; /* Esquinas redondeadas */
+  padding: 2px 6px;
+  background-color: rgba(199, 199, 199, 0.753);
+  border-radius: 8px;
 }
 
 .buttons-menu {
-  background-color: rgba(128, 128, 128, 0.737); /* Fondo gris semitransparente */
-  padding: 2px; /* Relleno interno pequeño */
-  border-radius: 8px; /* Esquinas redondeadas */
-  margin-right: 15px; /* Espacio a la derecha */
+  background-color: rgba(128, 128, 128, 0.737);
+  padding: 2px;
+  border-radius: 8px;
+  margin-right: 15px;
 }
 
 .buttons-menu > button {
-  padding: 8px 16px; /* Relleno interno para botones del menú */
-  font-weight: 600; /* Texto seminegrita */
+  padding: 8px 16px;
+  font-weight: 600;
 }
 
 .link-menu {
-  font-size: var(--size-paragraphs); /* Tamaño de fuente para enlaces del menú */
-  font-weight: 600; /* Texto seminegrita */
+  font-size: var(--size-paragraphs);
+  font-weight: 600;
 }
 
 .col-content {
-  display: flex; /* Contenedor flexible para columnas */
+  display: flex;
 }
 
 .button-hightlight{
-  background-color: white; /* Fondo blanco */
-  color: black; /* Texto negro */
+  background-color: white;
+  color: black;
 }
 
 .button-nohightlight{
-  background-color: rgb(67, 67, 67); /* Fondo gris oscuro */
-  color: white; /* Texto blanco */
+  background-color: rgb(67, 67, 67);
+  color: white;
 }
 
 #logo {
-  letter-spacing: 4px; /* Espacio entre letras */
-  font-size: 16px; /* Tamaño de fuente del logo */
-  margin-right: 16px; /* Margen derecho */
+  letter-spacing: 4px;
+  font-size: 16px;
+  margin-right: 16px;
 }
 
 #header-content {
-  display: grid; /* Usa grid para el contenido del header */
-  grid-template-columns: 50% 50%; /* Dos columnas iguales */
-  height: 100%; /* Altura completa del contenedor */
+  display: grid;
+  grid-template-columns: minmax(420px, 520px) 1fr;
+  align-items: start;
+  height: 100%;
+}
+
+.col-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 #column-content {
-  gap: 16px; /* Separación entre elementos dentro de la columna */
-  padding: 0 0 120px 120px; /* Espacio interno inferior y izquierdo */
+  gap: 16px;
+  padding: 80px 0 0 64px;
+  max-width: 520px;
 }
 
 #column-content > h1 {
-  font-size: var(--size-titles); /* Tamaño grande para el título */
-  font-weight: 800; /* Título muy negrita */
+  font-size: var(--size-titles);
+  font-weight: 800;
 }
 
 #column-content > p {
-  font-size: var(--size-paragraphs); /* Tamaño estándar para párrafos */
-  color: rgb(145, 145, 145); /* Texto gris claro */
-  font-weight: 600; /* Texto seminegrita */
+  font-size: var(--size-paragraphs);
+  color: rgb(145, 145, 145);
+  font-weight: 600;
 }
 
 #column-content > h2 {
-  font-size: var(--size-titles); /* Tamaño grande para subtítulos */
-  font-weight: 600; /* Texto seminegrita */
+  font-size: var(--size-titles);
+  font-weight: 600;
 }
 
 #column-content > h2 > span {
-  font-size: var(--size-highlights-paragraphs); /* Tamaño para texto destacado en h2 */
-  color: rgb(145, 145, 145); /* Color gris claro */
+  font-size: var(--size-highlights-paragraphs);
+  color: rgb(145, 145, 145);
 }
 
 #column-content > div{
-  display: flex; /* Contenedor flexible para botones u otros elementos */
-  gap: 16px; /* Espacio entre los elementos */
+  display: flex;
+  gap: 16px;
 }
 
 #column-content > div > button{
-  padding: 8px 32px; /* Relleno interno para botones */
-  font-size: var(--size-paragraphs); /* Tamaño de texto de botón */
-  font-weight: 600; /* Texto seminegrita */
-  border-radius: 6px; /* Esquinas ligeramente redondeadas */
+  padding: 8px 32px;
+  font-size: var(--size-paragraphs);
+  font-weight: 600;
+  border-radius: 6px;
 }
-
 
 /*
   Sección secundaria (illustration + contenido centrado)
-  - Uso: sección con ilustración de apoyo, centrada horizontalmente.
-  - Mantengo un padding amplio para separación vertical.
+FOTO LINEAS BLANCAS
 */
 .secondary-header {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
     url("https://starlink.com/assets-new/images/landing/illustrations/illustration_08.webp");
-  background-size: cover; /* Cubrir todo el área sin repetir */
+  background-size: 900px; /* Cubrir todo el área sin repetir */
+  background-repeat: no-repeat;
   background-position: center; /* Centrar la imagen */
   padding: 60px 32px; /* Espacio arriba/abajo y laterales */
   display: flex; /* Centrar internamente con flex */
@@ -227,9 +234,9 @@ nav {
 /* Botones de selección centrados (ej. mensual/anual)
    - Fondo con radio grande para aspecto de cápsula */
 .buttons-center {
-  background-color: rgba(128, 128, 128, 0.737);
-  padding: 4px; /* Pequeño acolchado alrededor de los botones */
-  border-radius: 20px; /* Forma redondeada tipo cápsula */
+  background-color: rgba(56, 55, 55, 0.737);
+  padding: 1px; /* Pequeño acolchado alrededor de los botones */
+  border-radius: 7px; /* Forma redondeada tipo cápsula */
   display: flex;
   justify-content: center;
   width: fit-content; /* Ajusta el ancho al contenido */
@@ -242,13 +249,13 @@ nav {
   justify-content: center;
   padding: 8px 16px;
   font-weight: 600;
-  border-radius: 20px; /* Mantener forma redondeada */
+  border-radius: 5px; /* Mantener forma redondeada */
   color: #ffffff; /* Texto en blanco por contraste */
 }
 
 /* Estado activo: botón resaltado */
 .buttons-center > button.button-active {
-  background-color: rgba(199, 199, 199, 0.753);
+  background-color: rgba(68, 65, 65, 0.753);
 }
 
 /* Estado inactivo: transparente para que se note la cápsula */
@@ -257,107 +264,52 @@ nav {
 }
 
 /* Contenedor para tarjetas (cards)
-   - En pantallas grandes: fila de 3 tarjetas con gap controlado
-   - Uso: presentar características o comparativas */
+   - Se organiza con grid para que todas las columnas tengan el mismo tamaño
+   - Cada tarjeta usa flex para distribuir su contenido interno */
 .cards-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch; /* Hace que las tarjetas tengan la misma altura */
-  gap: 24px;
-  width: 100%;
-  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  align-items: stretch;
+  grid-auto-rows: 1fr;
 }
 
-/* Tarjeta individual
-   - Fondo oscuro, bordes redondeados y padding generoso
-   - Flex para permitir distribuir título/descripcion/acciones */
+/* Tarjeta individual */
+   
 .card {
   background-color: #111111;
   border-radius: 24px;
-  padding: 30px;
+  padding: 16px 24px;
   color: #ffffff;
-  flex: 1 1 calc((100% - 48px) / 3); /* Tres columnas con gap considerado */
-  min-width: 280px; /* Evita que la tarjeta sea demasiado estrecha */
-  max-width: 360px; /* Limita el crecimiento */
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Separar contenido superior e inferior */
+  justify-content: space-between;
+  min-height: 260px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  gap: 10px;
+}
+
+.card-price-container {
+  margin-top: auto;
 }
 
 /* Título de tarjeta: tamaño y peso para destacar */
 .card-title {
   font-size: 1.3rem;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 2px;
   font-weight: bold;
 }
 
 /* Descripción de tarjeta: color más tenue y buena lectura */
 .card-description {
   color: #8a8a8a;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   line-height: 1.5; /* Mejora legibilidad en párrafos */
-  margin-bottom: 35px; /* Espacio antes de acciones/precio */
-}
-
-/*
-  ======RESPONSIVE======
-*/
-@media (max-width: 900px) {
-  #header-content {
-    grid-template-columns: 1fr;
-  }
-
-  #column-content {
-    padding: 24px 24px 80px 24px;
-  }
-
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: min(100%, 500px);
-  }
-}
-
-@media (max-width: 600px) {
-  header,
-  .secondary-header {
-    padding: 40px 20px;
-  }
-
-  nav {
-    padding: 20px 0 0;
-  }
-
-  #column-content > h1 {
-    font-size: 3rem;
-  }
-
-  #column-content > h2 {
-    font-size: 2.5rem;
-  }
-
-  #column-content > div > button {
-    padding: 10px 20px;
-  }
-
-  .buttons-center {
-    width: auto;
-    padding: 4px;
-  }
-
-  .cards-container {
-    gap: 18px;
-  }
-
-  .card {
-    min-width: 100%;
-    padding: 24px;
-  }
+  margin-bottom: 1px; /* Espacio antes de acciones/precio */
 }
 
 /*
@@ -392,12 +344,454 @@ nav {
 .card-list {
   list-style-type: disc;
   padding-left: 18px;
-  margin: 0 0 30px;
+  margin: 0 auto 30px;
   color: #8a8a8a;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   line-height: 1.7;
+  max-width: 90%;
 }
 
 .card-list li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+  color: #8a8a8a;
+  font-size: 0.75rem;
+}
+
+.card-description.note {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+/* 
+
+
+esto es la tercera parte  
+foto del rayo y cabaña
+
+
+*/
+
+.tercer-header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("https://starlink.com/assets-new/images/landing/field/v4_lightning.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+}
+
+.tercer-content {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  padding: 120px 32px;
+}
+
+.tercer-text {
+  max-width: 620px;
+}
+
+.tercer-text > h2 {
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  line-height: 1.02;
+  margin-bottom: 28px;
+  font-weight: 900;
+}
+
+.tercer-text > p {
+  color: #e5e5e5;
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 40px;
+}
+
+.tercer-text > button {
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-weight: 700;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.tercer-card {
+  display: none;
+}
+
+/* 
+
+
+esto es la cuarta parte 
+IMAGEN CARRO -NIEVE
+
+
+*/
+
+.cuarto-header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://starlink.com/assets-new/images/landing/field/v4_car_on_ice.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+}
+
+.cuarto-content {
+  width: min(100%, 1140px);
+  margin: 0 auto;
+  padding: 110px 32px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.cuarto-copy {
+  max-width: 620px;
+}
+
+.cuarto-copy > h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 0.95;
+  margin-bottom: 18px;
+  font-weight: 900;
+}
+
+.cuarto-copy > p {
+  color: #e4e4e4;
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 32px;
+}
+
+.cuarto-copy > button {
+  padding: 16px 32px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* 
+
+
+esto es la quinta parte 
+ imagen lineas blancas
+
+
+*/
+
+.quinta-header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://starlink.com/assets-new/images/landing/illustrations/illustration_08.webp");
+  background-size: 700px; /* Cubrir todo el área sin repetir */
+  background-repeat: no-repeat; /* Centrar la imagen */
+  padding: 80px 32px 40px 32px; /* espacio superior mayor para separar del header */
+  display: flex;
+  flex-direction: column; /* título arriba y contenido debajo */
+  align-items: center;
+  position: relative;
+}
+
+
+.quinta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px; /* Separación vertical entre hijos */
+  width: 70%;
+  max-width: 700px; /* Limita el ancho para evitar líneas demasiado largas */
+}
+
+/* Scroll horizontal específico para la quinta sección */
+.quinta-header .cards-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth; /* desplazamiento suave solo con CSS */
+  padding: 20px 8px 60px 8px; /* mayor espacio abajo para chevrons */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: min(100%, 1100px);
+  margin-top: 8px;
+  scrollbar-width: auto;
+}
+
+.quinta-header .cards-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.quinta-header .cards-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  color: #ffffff;
+  padding-top: 6px;
+}
+
+.quinta-header .cards-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.quinta-header .cards-scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.quinta-header .card.image-card {
+  min-width: 320px;
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  overflow: visible;
+  background-color: transparent;
+  scroll-snap-align: start;
+}
+
+.quinta-header .card-image {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px;
+}
+
+.quinta-header .card-info {
+  padding: 8px 4px 0 4px;
+  background: transparent;
+  color: #e6e6e6;
+  min-height: auto;
+  display: block;
+  justify-content: flex-start;
+  border: none;
+  border-radius: 0;
+  margin-top: 10px;
+}
+
+.quinta-header .card-info .card-title {
+  font-size: 0.55rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.quinta-header .card-info .card-description {
+  font-size: 0.48rem;
+  color: #cfcfcf;
+  line-height: 1.00;
+}
+
+/* Mostrar el título y la descripción en línea para parecerse al diseño de referencia */
+.quinta-header .card-info .card-title,
+.quinta-header .card-info .card-description {
+  display: inline;
+  vertical-align: middle;
+}
+.quinta-header .card-info .card-title { margin-right: 8px; }
+
+/* Controles pequeños de desplazamiento  */
+.scroll-controls {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.scroll-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  border: none;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  cursor: pointer;
+}
+
+.scroll-btn i { font-size: 12px; }
+
+.scroll-btn:hover { background: rgba(255,255,255,0.06); }
+
+/* 
+
+
+esto es la sesta parte 
+imagen techo verde
+
+
+*/
+
+.sesto-header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("https://starlink.com/assets-new/images/landing/field/v4_green_roof.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+}
+
+.sesto-content {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 100px 32px;
+}
+
+.sesto-copy {
+  max-width: 640px;
+}
+
+.sesto-copy > h1 {
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.sesto-copy > p {
+  color: #e4e4e4;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.sesto-copy > button {
+  padding: 16px 34px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+.page-footer {
+  background-color: #040404;
+  padding: 0 15px 4px;
+  margin-top: -8px;
+  color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto 4px;
+  width: min(100%, 1000px);
+}
+
+.footer-links a {
+  color: #e8e8e8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.72rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+  color: #9c9c9c;
+  font-size: 0.52rem;
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  margin-top: 0; /* sube ligeramente la línea inferior */
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: #e8e8e8;
+  font-weight: 700;
+  font-size: 0.78rem;
+}
+
+.footer-bottom a {
+  color: #e8c9c9e8;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+/* 
+
+
+esto es la septimo parte 
+imagen señor laptop
+
+
+*/
+
+.septimo-header {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("https://starlink.com/assets-new/images/landing/field/v4_residential_yard.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+}
+
+.septimo-content {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 110px 32px;
+}
+
+.septimo-copy {
+  max-width: 640px;
+}
+
+.septimo-copy > h1 {
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.septimo-copy > p {
+  color: #e4e4e4;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.septimo-copy > button {
+  padding: 16px 34px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
 }
