@@ -312,68 +312,6 @@ FOTO LINEAS BLANCAS
   line-height: 1.5; /* Mejora legibilidad en párrafos */
   margin-bottom: 35px; /* Espacio antes de acciones/precio */
 }
-
-/*
-  ======RESPONSIVE======
-*/
-@media (max-width: 900px) {
-  #header-content {
-    grid-template-columns: 1fr;
-  }
-
-  #column-content {
-    padding: 24px 24px 80px 24px;
-    justify-content: center;
-  }
-
-  .cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: min(100%, 500px);
-  }
-}
-
-@media (max-width: 600px) {
-  header,
-  .secondary-header {
-    padding: 40px 20px;
-  }
-
-  nav {
-    padding: 20px 0 0;
-  }
-
-  #column-content > h1 {
-    font-size: 3rem;
-  }
-
-  #column-content > h2 {
-    font-size: 2.5rem;
-  }
-
-  #column-content > div > button {
-    padding: 10px 20px;
-  }
-
-  .buttons-center {
-    width: auto;
-    padding: 4px;
-  }
-
-  .cards-container {
-    gap: 18px;
-  }
-
-  .card {
-    min-width: 100%;
-    padding: 24px;
-  }
-
-}
-
 /*
   ======TARJETAS DE PRECIO======
 */
