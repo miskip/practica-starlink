@@ -215,9 +215,9 @@ FOTO LINEAS BLANCAS
     url("https://starlink.com/assets-new/images/landing/illustrations/illustration_08.webp");
   background-size: 900px; /* Cubrir todo el área sin repetir */
   background-repeat: no-repeat;
-  background-position: center; /* Centrar la imagen */
-  padding: 60px 32px; /* Espacio arriba/abajo y laterales */
-  display: flex; /* Centrar internamente con flex */
+  background-position: center; 
+  padding: 60px 32px; 
+  display: flex; 
   justify-content: center; /* Centrado horizontal */
 }
 
@@ -493,7 +493,7 @@ esto es la quinta parte
     url("https://starlink.com/assets-new/images/landing/illustrations/illustration_08.webp");
   background-size: 700px; /* Cubrir todo el área sin repetir */
   background-repeat: no-repeat; /* Centrar la imagen */
-  padding: 80px 32px 40px 32px; /* espacio superior mayor para separar del header */
+  padding: 80px 32px 40px 32px; 
   display: flex;
   flex-direction: column; /* título arriba y contenido debajo */
   align-items: center;
@@ -505,9 +505,9 @@ esto es la quinta parte
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px; /* Separación vertical entre hijos */
+  gap: 32px; 
   width: 70%;
-  max-width: 700px; /* Limita el ancho para evitar líneas demasiado largas */
+  max-width: 700px; 
 }
 
 /* Scroll horizontal específico para la quinta sección */
@@ -518,7 +518,7 @@ esto es la quinta parte
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth; /* desplazamiento suave solo con CSS */
-  padding: 20px 8px 60px 8px; /* mayor espacio abajo para chevrons */
+  padding: 20px 8px 60px 8px; 
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   width: min(100%, 1100px);
